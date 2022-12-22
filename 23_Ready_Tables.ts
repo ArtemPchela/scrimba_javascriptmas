@@ -14,7 +14,7 @@ function displayTables() {
     }).join("")
 }
 
-displayTables()
+displayTables();
 
 /* Challenge 3: Ready Tables
 - Topic: Return a Function
