@@ -1,21 +1,3 @@
-const getTables = document.querySelector("#tables")
-
-function getReadyTables() {
-    const readyTables = []
-    for (let i = 0; i < 2; i++) {
-        readyTables.push(Math.round(Math.random()*20) + 1)
-    }
-    return readyTables
-}
-
-function displayTables() {
-    getTables.innerHTML = getReadyTables().map((table) => {
-        return `<div class="table">${table}</div>`
-    }).join("")
-}
-
-displayTables();
-
 /* Challenge 3: Ready Tables
 - Topic: Return a Function
 Our restaurant has 20 tables and the staff serves
@@ -35,3 +17,40 @@ be generated for each table value. Here is an example:
 5. Set the innerHTML content of the tables <section>
 to the displayTables function call.
 */
+const getTables = document.querySelector("#tables")
+
+function getReadyTables() {
+    const readyTables = []
+    for (let i = 0; i < 2; i++) {
+        readyTables.push(Math.round(Math.random()*20) + 1)
+    }
+    return readyTables
+}
+
+function displayTables() {
+    getTables.innerHTML = getReadyTables().map((table) => {
+        return `<div class="table">${table}</div>`
+    }).join("")
+}
+
+displayTables();
+
+/**
+ * if restaurant business will start to grow generate automatically number of tables
+ * **/
+
+// function getReadyTables(tables) {
+//     const readyTables = []
+//     for (let i = 0; i < 2; i++) {
+//         readyTables.push(Math.round(Math.random()*`${tables}`) + 1)
+//     }
+//     return readyTables
+// }
+//
+// function displayTables(tables) {
+//     getTables.innerHTML = getReadyTables(tables).map((table) => {
+//         return `<div class="table">${table}</div>`
+//     }).join("")
+// }
+//
+// displayTables(50);
